@@ -1,5 +1,8 @@
 # SimpleBashUtils
-This is an implementation of of Bash text utilities: cat, grep. The programs are developed in C language of C11 standard using gcc compiler.
+1. [In English](#description)
+2. [На русском](#описание)
+### Description
+Implementation of of Bash text utilities: cat, grep. The programs are developed in C language of C11 standard using gcc compiler.
 
 ### Build
 ```
@@ -37,3 +40,44 @@ make build
 | -s | Suppress error messages about nonexistent or unreadable files. |
 | -f file | Take regexes from a file. |
 | -o | Output the matched parts of a matching line. |
+***
+
+### Описание
+Реализация текстовых утилит Bash: cat, grep. Программы разработаны на языке C стандарта C11 с использованием компилятора gcc.
+
+### Сборка
+```
+cd src/cat
+make build
+cd ../grep
+make build
+```
+
+### Использование cat
+`cat [OPTION] [FILE]...`
+
+### Опции cat
+| Опции | Описание |
+| ------ | ------ |
+| -b (GNU: --number-nonblank) | нумерует только непустые строки |
+| -e предполагает и -v (GNU only: -E то же самое, но без применения -v) | также отображает символы конца строки как $  |
+| -n (GNU: --number) | нумерует все выходные строки |
+| -s (GNU: --squeeze-blank) | сжимает несколько смежных пустых строк |
+| -t предполагает и -v (GNU: -T то же самое, но без применения -v) | также отображает табы как ^I |
+
+### Использование grep
+`grep [options] template [file_name]`
+
+### Опции grep
+| Опции | Описание |
+| ------ | ------ |
+| -e | Шаблон |
+| -i | Игнорирует различия регистра.  |
+| -v | Инвертирует смысл поиска соответствий. |
+| -c | Выводит только количество совпадающих строк. |
+| -l | Выводит только совпадающие файлы.  |
+| -n | Предваряет каждую строку вывода номером строки из файла ввода. |
+| -h | Выводит совпадающие строки, не предваряя их именами файлов. |
+| -s | Подавляет сообщения об ошибках о несуществующих или нечитаемых файлах. |
+| -f file | Получает регулярные выражения из файла. |
+| -o | Печатает только совпадающие (непустые) части совпавшей строки. |
